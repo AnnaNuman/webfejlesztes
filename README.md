@@ -15,4 +15,4 @@ egymás után zenével kapcsolatos szavak váltakozása minden oldal tetején, h
 
 EGYEDI FONTTÍPUS: 'Hachi Maru Pop'- honlap neve minden oldalon (Zenekuckó); 'Raleway' – header részben az oldalak közötti navigációs mezők nevei 
 
-ÁTVETT TARTALMAK: CHAT GPT: a legtöbb szöveges tartalmat és néhány képet írta; ![image](https://github.com/user-attachments/assets/2fecb866-05db-413d-b46e-13913f8f6718)
+ÁTVETT TARTALMAK: CHAT GPT: a legtöbb szöveges tartalmat és néhány képet írta; 
