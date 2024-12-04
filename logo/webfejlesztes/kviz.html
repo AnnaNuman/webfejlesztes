@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Numan Anna Sára">
+    <meta name="copyright" content="Tanulási célú oldal">
+    <meta name="description" content="Egy teljesen zenei platform zeneszeretőknek.">
+    <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico">
+    <title>ZENEKUCKÓ</title>
+
+    <script src="jquery-3.7.1.js" ></script>
+    <script src="jquery-validation-1.19.5/dist/jquery.validate.js"> </script>
+    
+        <script>
+        $(document).ready(function(){
+        $("#myform").validate({
+    rules: {
+     nev: "required",
+     emailcim: {
+      required: true,
+      email: true
+     },
+     jelszo: {
+      required: true,
+      minlength: 8
+     },
+     telefonszam: {
+      required: true,
+     },
+     szuletesi_datum: {
+      required: true,
+     },
+	elfogad: {
+      required: true,
+     },
+    },
+    messages: {
+     nev: " Kérlek írd be a teljes nevedet!",
+     emailcim: " Kérlek valós email címet adj meg!",
+     jelszo: {
+      required: " Kérlek add meg a jelszavad!",
+      minlength: " A jelszó legalább 8 karakter hosszú legyen!"
+     },
+     telefonszam: " Kérlek írd be a telefonszámodat a megadott formátumban!",
+     szuletesi_datum: " Valós születési dátumot adj meg!",
+	elfogad: " Kérlek fogadd el a feltételeinket!",
+    },
+   });
+ });
+    </script>
+    
+    <style>
+        label.error {
+        color: #644f29;
+        }
+        </style>
+
+</head>
+
+<body>
+   
+    <div class="header">
+        <h1>ZENEKUCKÓ</h1>
+        <h3> „A zene az a csend, amely szavak nélkül képes elmondani, amit érzünk.” – Victor Hugo </h3>
+        <div id="megjelenito"></div>
+        <button id="hatterGomb">Háttér váltása</button>
+    </div>
+<div class="menu-bar">
+    <ul>
+        <li><a href="index.html">FŐOLDAL</a></li>
+        <li><a href="zenetortenet.html">ZENETÖRTÉNET</a> </li>
+        <li><a href="zenei_mufajok.html">ZENEI MŰFAJOK</a></li>
+        <li><a href="hogyan_keszul.html">HOGYAN KÉSZÜL VALÓJÁBAN?</a></li>
+        <li><a href="esemenynaptar.html">ESEMÉNYEK</a></li>
+        <li><a class="active" href="kviz.html">KVIZ</a></li>
+    </ul>
+</div>
+   
+   
+   
+   
+   
+    <div class="container">
+        
+        <article class="kviz">
+            <h2>ZENEI KVÍZ</h2>
+            <p class="tartalom"> 
+                Kíváncsi vagy, mennyire vagy igazi zenerajongó? Töltsd ki a zenei kvízt, és fedezd fel, milyen nagy zenerajongó vagy! Készülj fel egy szórakoztató utazásra a zene világában! Mutasd meg, hogy a zene igazán közel áll hozzád, és inspirálj másokat is a részvételre! Tedd próbára magad, és derítsd ki, mennyit tudsz a zene világáról!</p>
+        <hr>
+
+        <div class="kviz_kitoltendo">
+            <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php">
+        
+                <p>
+                    <label for="zene_szeretet">1. Mennyire szereted a zenét?</label><br>
+                    <input id="zene_szeretet" type="range" min="1" max="20" value="1">
+                </p>
+        
+                <p>
+                    <label for="zene_szine">2. Melyik szín jut eszedbe a zenéről?</label><br>
+                    <input id="zene_szine" type="color">
+                </p>
+        
+                <p>3. Milyen hangszeren játszol, vagy játszanál szívesen?<br>
+                    <label><input type="checkbox" name="hegedu"> Hegedű</label><br>
+                    <label><input type="checkbox" name="bracsa"> Brácsa</label><br>
+                    <label><input type="checkbox" name="csello"> Cselló</label><br>
+                    <label><input type="checkbox" name="zongora"> Zongora</label><br>
+                    <label><input type="checkbox" name="gitar"> Gitár</label><br>
+                    <label><input type="checkbox" name="fuvola"> Fuvola</label><br>
+                    <label><input type="checkbox" name="trombita"> Trombita</label><br>
+                    <label><input type="checkbox" name="klarinet"> Klarinét</label><br>
+                    <label><input type="checkbox" name="dob"> Dob</label><br>
+                    <label><input type="checkbox" name="furulya"> Furulya</label><br>
+                    <label><input type="checkbox" name="harfa"> Hárfa</label>
+                </p>
+        
+                <p>4. Szoktál zenét hallgatni?<br>
+                    <label><input type="radio" name="zenehallgatas" value="i"> Igen</label>
+                    <label><input type="radio" name="zenehallgatas" value="n"> Nem</label>
+                </p>
+        
+                <p>
+                    <label for="gyakorisag">5. Milyen gyakran hallgatsz zenét?</label><br>
+                    <select id="gyakorisag" name="gyakorisag">
+                        <option value="" disabled selected>Válassz egy lehetőséget</option>
+                        <option value="naponta">Minden nap</option>
+                        <option value="hetente">Hetente</option>
+                        <option value="ritkan">Ritkán</option>
+                    </select>
+                </p>
+        
+                <p>6. Írtál már saját zenét?<br>
+                    <label><input type="radio" name="sajat_zene" value="i"> Igen</label>
+                    <label><input type="radio" name="sajat_zene" value="n"> Nem</label>
+                </p>
+        
+                <p>
+                    <label for="kedvenc_dal">7. Mi a kedvenc dalod?</label><br>
+                    <input id="kedvenc_dal" type="text" size="40" name="kedvenc_dal" placeholder="pl. Lauren Daigle: You Say">
+                </p>
+        
+                <p>
+                    <label for="filmzene">8. Melyik filmzenét szereted a legjobban?</label><br>
+                    <input id="filmzene" type="url" size="40" placeholder="Add meg a YouTube linket hozzá!">
+                </p>
+        
+                <p>9. Melyik zenei műfajokat hallgatod legszívesebben?<br>
+                    <label><input type="checkbox" name="klasszikus"> Klasszikus</label><br>
+                    <label><input type="checkbox" name="popzene"> Popzene</label><br>
+                    <label><input type="checkbox" name="rock"> Rock</label><br>
+                    <label><input type="checkbox" name="jazz"> Jazz</label><br>
+                    <label><input type="checkbox" name="hiphop"> Hip-hop</label><br>
+                    <label><input type="checkbox" name="elektronikus"> Elektronikus zene</label><br>
+                    <label><input type="checkbox" name="blues"> Blues</label><br>
+                    <label><input type="checkbox" name="country"> Country</label><br>
+                    <label><input type="checkbox" name="reggae"> Reggae</label><br>
+                    <label><input type="checkbox" name="metal"> Metal</label><br>
+                    <label><input type="checkbox" name="gospel"> Gospel</label><br>
+                    <label><input type="checkbox" name="soul"> Soul</label><br>
+                    <label><input type="checkbox" name="folk"> Folk</label>
+                </p>
+        
+                <p>
+                    <label for="zeneikor">10. Melyik zenei kor a kedvenced?</label><br>
+                    <select id="zeneikor" name="zeneikor" required>
+                        <option value="" disabled selected>Válassz egy lehetőséget</option>
+                        <option value="okor">Ókor</option>
+                        <option value="kozepkor">Középkor</option>
+                        <option value="reneszansz">Reneszánsz</option>
+                        <option value="barokk">Barokk</option>
+                        <option value="klasszicizmus">Klasszicizmus</option>
+                        <option value="romantika">Romantika</option>
+                        <option value="20szazad">20. század</option>
+                        <option value="kortars">Kortárs</option>
+                    </select>
+                </p>
+        
+                <p>
+                    <label for="gitar_hurok">11. Hány húrja van egy hagyományos gitárnak?</label><br>
+                    <input id="gitar_hurok" type="number" min="1" max="15">
+                </p>
+        
+                <p>
+                    <label for="vonoshurok">12. Hány húrja van a vonós hangszereknek?</label><br>
+                    <input id="vonoshurok" type="number" min="1" max="10">
+                </p>
+        
+                <input class="mybutton" type="submit" value="Elküldés">
+                <input class="mybutton" type="reset" value="Alaphelyzet">
+            </form>
+        </div>
+        </article>
+        
+        <article class="kviz">
+            <h2>NYEREMÉNYJÁTÉK</h2>
+            <p class="tartalom">
+                A zenei kviz után ne hagyd ki a lehetőséget a nyereményjátékunkra! Töltsd ki az alábbi űrlapot, hogy esélyt kapj
+                értékes zenei nyereményekre. Nem csak a tudásodat teheted próbára, de szerencsés nyertesünk is lehetsz.
+                Ne habozz – regisztrálj a nyereményekért!
+            </p>
+        
+            <div class="kviz_kitoltendo">
+                <form method="post" action="https://rf.uni-corvinus.hu/webfejlesztes/receive.php" id="myform" novalidate>
+                    <hr>
+                    <h2>Töltsd ki a jelentkezőlapot az értékes nyereményekért!</h2>
+                    <hr>
+                    <p>
+                        <label for="nev">Név:</label><br>
+                        <input id="nev" type="text" size="40" name="nev" placeholder="Különleges Emma Zoé" >
+                    </p>
+        
+                    <p>
+                        <label for="emailcim">Email cím:</label><br>
+                        <input id="emailcim" type="email" size="40" name="emailcim" placeholder="xy@email.hu" >
+                    </p>
+        
+                    <p>
+                        <label for="jelszo">Jelszó:</label><br>
+                        <input id="jelszo" type="password" name="jelszo" minlength="8" maxlength="20" placeholder="Legalább 8 karakter!" >
+                    </p>
+        
+                    <p>
+                        <label for="lakcim">Lakcím (nem kötelező, csak nyeremény esetén):</label><br>
+                        <textarea id="lakcim" name="lakcim" placeholder="Irányítószám, város, utcanév, házszám"></textarea>
+                    </p>
+        
+                    <p>
+                        <label for="telefonszam">Telefonszám:</label><br>
+                        <input id="telefonszam" type="tel" name="telefonszam" placeholder="+36301234567" size="15" >
+                    </p>
+        
+                    <p>
+                        <label for="szuletesi_datum">Születési dátum:</label><br>
+                        <input id="szuletesi_datum" type="date" name="szuletesi_datum" >
+                    </p>
+                    <p>
+                        <label for="elfogad">Elfogadom a feltételeket. </label>
+                        <input type="checkbox" name="elfogad" id="elfogad">
+                    </p>
+                    <p>
+                        <label for="feliratkoz">Feliratkozok a hírlevélre még több zenei tartalomért. </label>
+                        <input type="checkbox" name="feliratkoz" id="feliratkoz">
+                    </p>
+                    <input class="mybutton" type="submit" value="Elküldés">
+                    <input class="mybutton" type="reset" value="Alaphelyzet">
+                </form>
+            </div>
+        </article>
+        
+        
+        
+        
+    </div>
+
+    <footer>
+        <aside class="lablec">
+           <table>
+            <tr>
+            <td>
+                <h3>Adatok:</h3>
+            <ul>
+                <li>Numan Anna Sára</li>
+                <li><em>zenekucko@zene.hu</em></li>
+                <li><em>06 30 123 4567</em></li>
+            </ul></td>
+            
+            <td>
+            <h3>Social media:</h3>
+            <ul>
+                <li>Instagram: <em>@zenekucko</em></li>
+                <li>Facebook: <em>Zenekuckó</em></li>
+            </ul></td>
+            </tr>
+            <tr><td colspan="2"><p><em>Minden jog fenntartva &copy;</em></p>
+            <p><em>AZ OLDAL KIZÁRÓLAG TANULMÁNYI CÉLÚ!</em></p></td>
+            </tr>
+           </table>
+        </aside>
+    </footer>
+
+
+<script src="script.js"></script>
+</body>
+
+</HTML>
