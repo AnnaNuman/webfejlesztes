@@ -1,0 +1,676 @@
+/*====ALTALANOS====*/
+
+* {
+   box-sizing:border-box; 
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+   
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: rgb(188, 178, 158);
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+.container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    /*opacity: 0.9;*/
+    border-radius: 15px;
+    color: #ffffff;
+ }
+
+.container>* {margin: 1%;
+height:fit-content;}
+
+
+
+
+/*Header*/
+
+.header {
+margin: 0;
+width: 100%;
+color: #ffffff;
+border:0;
+background-color: rgb(117, 94, 54);
+text-align: center;
+position: relative;
+z-index: 1000;
+}
+
+.header h1{
+    font-size: 3em;
+    font-family: 'Hachi Maru Pop', cursive;
+    margin:0;
+    padding-top: 60px;
+    letter-spacing: 15px;
+    }
+.header h3 {
+    padding-bottom:40px;
+    margin: 0;
+
+    font-size: 1em;
+    }
+
+
+#hatterGomb {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(220, 206, 178);
+    color: #786335;
+    border: 2px solid #1f1609;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#hatterGomb:hover {
+    background-color: #deceaf;
+    color: white;
+}
+
+
+
+ .content {
+        padding: 20px;
+    }
+
+.menu-bar {
+    background-color: rgb(117, 94, 54);
+    overflow: hidden;
+    position: sticky;
+    top: 0; /* Ez teszi a menüsávot fix pozícióssá görgetéskor */
+    z-index: 999;
+    color: #ffffff;
+}
+
+.menu-bar ul {
+display: flex;
+font-size: 1em;
+flex-wrap:wrap;
+flex-direction: row;
+justify-content:center;
+align-items:center;
+list-style-type: none;
+margin: 0;
+padding: 10px 0;
+font-family: 'Raleway', sans-serif;
+overflow: hidden;
+position: sticky;
+top: 0; /* Ez teszi a menüsávot fix pozícióssá görgetéskor */
+z-index: 999;
+}
+
+.menu-bar ul li{
+position:relative;
+margin:0 10px;
+}
+
+.menu-bar ul li a {
+display: block;
+padding: 10px;
+margin: 0;
+color: #ffffff;
+
+border-radius: 30px;
+text-align: center;
+text-decoration: none;
+
+float: left;
+
+}
+
+.menu-bar ul li a.active {
+background-color: rgb(179, 125, 80);
+}
+
+.menu-bar li a:hover {
+background-color: rgb(166, 145, 127);
+}
+
+
+
+
+/*Tartalom*/
+
+
+.sotet {
+    flex: 1 1 100%;
+    background-color: rgb(100, 89, 74);
+    margin:15px;
+    padding:15px;
+    text-align: left;
+    flex-direction:column;
+    border-radius: 15px;
+    box-shadow: 3px 0 10px rgba(39, 26, 12, 0.791);
+}
+.sotet img{
+    width: 100%;
+    height: auto;
+}
+
+.bevezetes{
+    flex: 1 1 100%;
+    background-color: rgb(164, 144, 118);
+    flex-direction:row;
+    border-radius: 15px;
+    font-family: cursive;
+    text-align: left;
+    margin:15px;
+    padding:15px;
+    box-shadow: 3px 0 10px rgba(113, 87, 60, 0.813);
+}
+
+.rolunk {
+    flex: 1 1 100%;
+    background-color: rgb(99, 85, 89);
+    margin:10px;
+    margin-bottom: 20px;
+    padding:15px;
+    font-family: cursive;
+    text-align: left;
+    font-size: 1em;
+    border-radius: 5px;
+    box-shadow: 3px 0 10px rgba(12, 8, 4, 0.791);
+    
+}
+
+.rolunk img{
+    max-width: 100px;
+    height: auto;
+    float: right;
+
+    
+}
+
+.rolunk img:hover {
+    transform: scale(1.1);
+}
+
+
+/*Menü*/
+
+nav {
+    flex: 1 1 100%;
+    padding:0;
+    margin: 0;
+     
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+nav li a {
+    display:block;
+    padding: 8px;
+    margin: 8px;
+  
+    color: #ffffff;
+    background-color: rgb(132, 110, 69);
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    background-color: rgb(179, 125, 78);
+}
+
+nav li a:hover {
+    background-color: rgb(146, 102, 63);
+}
+
+
+
+h2.cikkcim {
+    text-align: left;
+}
+
+p.tartalom {
+    padding: 3px;
+    text-indent: 1.1em;
+}
+
+
+.content-container {
+    flex: 1 1 100%;
+}
+
+.content-container img{
+    width: 100px;
+    height: auto;
+}
+
+.content-title {
+    cursor: pointer;
+}
+
+.content-body {
+    display: none;
+    
+}
+
+/* A tartalom megjelenítése, ha a checkbox be van jelölve */
+input[type="checkbox"]:checked + .content-body {
+    display: block;
+}
+
+.content-container input[type="checkbox"] {
+    display: none; /* Láthatatlan checkbox */
+}
+
+
+/* Események oldal */
+.egyedi{
+   text-align: center;     
+   max-width:100%;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(188, 178, 158);
+    box-shadow: 3px 0 10px rgba(83, 63, 40, 0.592);
+ }
+
+
+
+.event{
+    justify-content: center;
+    align-items: center; 
+    padding: 10px 10px;
+    margin: 20px;
+    padding: 20px;
+}
+
+
+
+.event table tr td{
+    border: solid 2px black;
+    background-color: rgb(188, 178, 158);  
+    padding:30px;
+    margin:50px;
+}
+.event h3 {
+    margin: 0;
+    color: #34495e;
+}
+.event p {
+    margin: 5px 0;
+}
+    
+
+
+button {
+    padding: 5px 10px;
+    background-color: #76653e;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #cdbb9a;
+}
+
+
+/*Mufajok*/
+.mufajok {
+    flex: 1 1 100%;
+    max-width: 90%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #76653e;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.image{
+    max-width: 100%;
+    height: auto;
+    margin:5px;
+    
+}
+
+
+.image img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+
+h2.title{
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+
+
+.content-body img{
+    max-width: 20%;
+    height: auto;
+    float: left;
+    margin: 0;
+    margin-right: 15px; 
+    margin-bottom: 5px;
+    
+    border-radius: 8px;
+}
+.content-body img:hover {
+    transform: scale(1.1);
+}
+
+.kviz{    
+    flex: 1 1 100%;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(188, 178, 158);
+    box-shadow: 3px 0 10px rgba(83, 63, 40, 0.592);
+}
+
+.kviz_kitoltendo{
+    text-align: left;
+}
+
+.mybutton{
+    color: rgb(255, 255, 255);
+    background-color: rgb(181, 167, 148);
+    font-size: 0.9em;
+    padding: 6px 6px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.mybutton:hover{
+    background-color: rgb(212, 203, 189);
+}
+
+
+
+/*Footer*/
+
+footer {
+padding: 30px 100px;
+margin: 0px;
+width: 100%;
+color: #ffffff;
+border:0;
+background-color: rgb(117, 94, 54);
+text-align: center;
+
+position: relative;
+z-index: 1000;
+
+}
+
+aside.lablec {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    padding: 10px; 
+}
+
+
+aside.lablec td ul li{
+    list-style-type: none;
+    text-align: left;
+}
+
+  
+  .erdekessegek {
+    display: block;
+    margin: 10px;
+    background-color: #b2a289;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+ 
+
+.tartalom img{
+    max-width:300px;
+    height:auto;
+    float:right;
+    margin: 10px;
+}
+
+
+/*fotó galéria*/
+.slider {
+    width: 65%;
+    min-width: 400px;
+    margin: 50px auto;
+}
+
+.slick-slide {
+    margin: 7px 7px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: black;
+}
+
+.slick-slide {
+    transition: all ease-in-out .3s;
+    opacity: .2;
+}
+
+.slick-active {
+    opacity: .5;
+}
+
+.slick-current {
+    opacity: 1;
+}
+
+
+
+
+/*   R E S Z P O N Z I V I T Á S   */
+
+
+@media all and (min-width: 600px) {
+/*tablet*/
+
+.header{
+    padding: 30px 100px;
+}
+
+nav {flex-basis: 13%;
+    max-width:300px;
+}
+
+article {flex-basis: 73%;
+}
+aside { flex-basis: 100%;
+}
+.sotet {
+    flex-basis: 63%;
+    
+}
+
+.content-container{
+    flex-basis: 73%;
+    max-width: 900px;
+}
+
+
+.erdekessegek{flex-basis:33%;
+    padding: 20px 20px;
+    margin: 80px 80px;
+}
+.bevezetes{flex-basis: 73%;
+    max-width: 900px;
+}
+.rolunk{
+    flex-basis:33%;
+    max-width: 350px;
+    
+
+    
+}
+
+
+.mufajok{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 60px 20px 60px;
+}
+.text{
+    max-width: 80%;
+}
+
+
+
+.content-container{
+    
+    flex-basis: 73%;
+    
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-right: 20px;
+    
+}
+
+.kviz{
+    flex-basis:48%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    
+}
+
+.egyedi{
+    flex-basis:23%;
+  
+    
+}
+.event{
+    flex-basis: 73%;
+}
+
+
+}
+
+
+@media all and (min-width: 768px) {
+    /*számítógép*/
+    
+    .header{
+        padding: 30px 100px;
+    }
+    header{
+        flex-basis:100%;
+    }
+    header ul{
+        
+        flex-basis:100%;
+    }
+    nav {flex-basis: 13%;
+        
+    }
+    article {flex-basis: 48%;
+    }
+    aside {flex-basis: 33%;
+    }
+    .erdekessegek{flex-basis:33%;
+        padding: 20px 20px;
+        margin: 80px 80px;
+    }
+    .bevezetes{flex-basis: 73%;
+        
+    }
+    .rolunk{
+        flex-basis:33%;
+         
+        
+    }
+    
+    .sotet {flex-basis: 63%;  
+        padding: 20px 20px;
+        max-width: 800px;
+        margin:10px;
+        
+    }
+
+
+    .mufajok{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 60px 20px 60px;
+        
+    }
+    
+    .text{
+        max-width: 80%;
+    }
+   
+    .image{
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    .content-container{
+        flex-basis: 73%;
+        max-width: 700px;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        margin-right: 20px;
+        
+    }
+    .egyedi{
+        flex-basis:23%;
+        max-width: 200px;
+    }
+    .kviz{
+        flex-basis:48%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        max-width: 600px;
+    }
+
+    
+
+
+    .kor-container {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: stretch;
+    
+        margin-bottom: 10px;
+      }
+    
+    
+      .erdekessegek {
+        margin-left: 10px;
+        margin-top: 0;
+      }
+   
+
+    
+}
