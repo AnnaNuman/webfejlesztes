@@ -1,4 +1,3 @@
-/*====ALTALANOS====*/
 
 * {
    box-sizing:border-box; 
@@ -7,8 +6,7 @@
 html {
     padding: 0px;
     margin: 0px;
-    scroll-behavior: smooth;
-   
+    scroll-behavior: smooth;  
 }
 
 body {
@@ -16,8 +14,7 @@ body {
     margin: 0px;
     background-color: rgb(188, 178, 158);
     background-size: cover;
-    background-attachment: fixed;
-    
+    background-attachment: fixed;  
 }
 
 .container {
@@ -25,8 +22,6 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-
-    /*opacity: 0.9;*/
     border-radius: 15px;
     color: #ffffff;
  }
@@ -35,10 +30,7 @@ body {
 height:fit-content;}
 
 
-
-
 /*Header*/
-
 .header {
 margin: 0;
 width: 100%;
@@ -51,19 +43,17 @@ z-index: 1000;
 }
 
 .header h1{
-    font-size: 3em;
+    font-size: 1.5em;
     font-family: 'Hachi Maru Pop', cursive;
-    margin:0;
+    margin:5px;
     padding-top: 60px;
     letter-spacing: 15px;
     }
 .header h3 {
     padding-bottom:40px;
     margin: 0;
-
     font-size: 1em;
     }
-
 
 #hatterGomb {
     position: absolute;
@@ -83,8 +73,6 @@ z-index: 1000;
     background-color: #deceaf;
     color: white;
 }
-
-
 
  .content {
         padding: 20px;
@@ -126,13 +114,10 @@ display: block;
 padding: 10px;
 margin: 0;
 color: #ffffff;
-
 border-radius: 30px;
 text-align: center;
 text-decoration: none;
-
 float: left;
-
 }
 
 .menu-bar ul li a.active {
@@ -144,11 +129,7 @@ background-color: rgb(166, 145, 127);
 }
 
 
-
-
 /*Tartalom*/
-
-
 .sotet {
     flex: 1 1 100%;
     background-color: rgb(100, 89, 74);
@@ -159,6 +140,7 @@ background-color: rgb(166, 145, 127);
     border-radius: 15px;
     box-shadow: 3px 0 10px rgba(39, 26, 12, 0.791);
 }
+
 .sotet img{
     width: 100%;
     height: auto;
@@ -187,15 +169,12 @@ background-color: rgb(166, 145, 127);
     font-size: 1em;
     border-radius: 5px;
     box-shadow: 3px 0 10px rgba(12, 8, 4, 0.791);
-    
 }
 
 .rolunk img{
     max-width: 100px;
     height: auto;
-    float: right;
-
-    
+    float: right;  
 }
 
 .rolunk img:hover {
@@ -204,27 +183,22 @@ background-color: rgb(166, 145, 127);
 
 
 /*Menü*/
-
 nav {
     flex: 1 1 100%;
     padding:0;
-    margin: 0;
-     
+    margin: 0;    
 }
 
 nav ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
-    
+    padding: 0;  
 }
-
 
 nav li a {
     display:block;
     padding: 8px;
     margin: 8px;
-  
     color: #ffffff;
     background-color: rgb(132, 110, 69);
     border-radius: 30px;
@@ -239,8 +213,6 @@ nav li a:hover {
     background-color: rgb(146, 102, 63);
 }
 
-
-
 h2.cikkcim {
     text-align: left;
 }
@@ -249,7 +221,6 @@ p.tartalom {
     padding: 3px;
     text-indent: 1.1em;
 }
-
 
 .content-container {
     flex: 1 1 100%;
@@ -265,11 +236,9 @@ p.tartalom {
 }
 
 .content-body {
-    display: none;
-    
+    display: none;  
 }
 
-/* A tartalom megjelenítése, ha a checkbox be van jelölve */
 input[type="checkbox"]:checked + .content-body {
     display: block;
 }
@@ -278,8 +247,6 @@ input[type="checkbox"]:checked + .content-body {
     display: none; /* Láthatatlan checkbox */
 }
 
-
-/* Események oldal */
 .egyedi{
    text-align: center;     
    max-width:100%;
@@ -288,8 +255,6 @@ input[type="checkbox"]:checked + .content-body {
     background-color: rgb(188, 178, 158);
     box-shadow: 3px 0 10px rgba(83, 63, 40, 0.592);
  }
-
-
 
 .event{
     justify-content: center;
@@ -315,8 +280,6 @@ input[type="checkbox"]:checked + .content-body {
     margin: 5px 0;
 }
     
-
-
 button {
     padding: 5px 10px;
     background-color: #76653e;
@@ -328,8 +291,6 @@ button:hover {
     background-color: #cdbb9a;
 }
 
-
-/*Mufajok*/
 .mufajok {
     flex: 1 1 100%;
     max-width: 90%;
@@ -343,23 +304,18 @@ button:hover {
 .image{
     max-width: 100%;
     height: auto;
-    margin:5px;
-    
+    margin:5px;  
 }
-
 
 .image img {
     max-width: 100%; 
     height: auto; 
 }
 
-
 h2.title{
     text-align: center;
     letter-spacing: 5px;
 }
-
-
 
 .content-body img{
     max-width: 20%;
@@ -368,9 +324,9 @@ h2.title{
     margin: 0;
     margin-right: 15px; 
     margin-bottom: 5px;
-    
     border-radius: 8px;
 }
+
 .content-body img:hover {
     transform: scale(1.1);
 }
@@ -401,10 +357,6 @@ h2.title{
     background-color: rgb(212, 203, 189);
 }
 
-
-
-/*Footer*/
-
 footer {
 padding: 30px 100px;
 margin: 0px;
@@ -413,10 +365,8 @@ color: #ffffff;
 border:0;
 background-color: rgb(117, 94, 54);
 text-align: center;
-
 position: relative;
 z-index: 1000;
-
 }
 
 aside.lablec {
@@ -426,13 +376,11 @@ aside.lablec {
     padding: 10px; 
 }
 
-
 aside.lablec td ul li{
     list-style-type: none;
     text-align: left;
 }
 
-  
   .erdekessegek {
     display: block;
     margin: 10px;
@@ -440,8 +388,6 @@ aside.lablec td ul li{
     padding: 15px;
     border-radius: 8px;
   }
-  
- 
 
 .tartalom img{
     max-width:300px;
@@ -449,7 +395,6 @@ aside.lablec td ul li{
     float:right;
     margin: 10px;
 }
-
 
 /*fotó galéria*/
 .slider {
@@ -485,8 +430,6 @@ aside.lablec td ul li{
 }
 
 
-
-
 /*   R E S Z P O N Z I V I T Á S   */
 
 
@@ -496,26 +439,23 @@ aside.lablec td ul li{
 .header{
     padding: 30px 100px;
 }
-
+.header h1{
+    font-size: 4em;
+}
 nav {flex-basis: 13%;
     max-width:300px;
 }
-
 article {flex-basis: 73%;
 }
 aside { flex-basis: 100%;
 }
 .sotet {
     flex-basis: 63%;
-    
 }
-
 .content-container{
     flex-basis: 73%;
     max-width: 900px;
 }
-
-
 .erdekessegek{flex-basis:33%;
     padding: 20px 20px;
     margin: 80px 80px;
@@ -525,13 +465,8 @@ aside { flex-basis: 100%;
 }
 .rolunk{
     flex-basis:33%;
-    max-width: 350px;
-    
-
-    
+    max-width: 350px;   
 }
-
-
 .mufajok{
     display: flex;
     align-items: center;
@@ -541,17 +476,11 @@ aside { flex-basis: 100%;
 .text{
     max-width: 80%;
 }
-
-
-
 .content-container{
-    
     flex-basis: 73%;
-    
     flex-wrap: nowrap;
     flex-direction: column;
     margin-right: 20px;
-    
 }
 
 .kviz{
@@ -559,19 +488,14 @@ aside { flex-basis: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
-    
 }
 
 .egyedi{
     flex-basis:23%;
-  
-    
 }
 .event{
     flex-basis: 73%;
 }
-
-
 }
 
 
@@ -581,15 +505,16 @@ aside { flex-basis: 100%;
     .header{
         padding: 30px 100px;
     }
+    .header h1{
+        font-size: 4em;
+    }
     header{
         flex-basis:100%;
     }
     header ul{
-        
         flex-basis:100%;
     }
-    nav {flex-basis: 13%;
-        
+    nav {flex-basis: 13%;   
     }
     article {flex-basis: 48%;
     }
@@ -599,48 +524,35 @@ aside { flex-basis: 100%;
         padding: 20px 20px;
         margin: 80px 80px;
     }
-    .bevezetes{flex-basis: 73%;
-        
+    .bevezetes{flex-basis: 73%;   
     }
     .rolunk{
-        flex-basis:33%;
-         
-        
+        flex-basis:33%;  
     }
-    
     .sotet {flex-basis: 63%;  
         padding: 20px 20px;
         max-width: 800px;
-        margin:10px;
-        
+        margin:10px;  
     }
-
-
     .mufajok{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 20px 60px 20px 60px;
-        
+        margin: 20px 60px 20px 60px;  
     }
-    
     .text{
         max-width: 80%;
     }
-   
     .image{
         max-width: 100%;
         height: auto;
     }
-
-
     .content-container{
         flex-basis: 73%;
         max-width: 700px;
         flex-wrap: nowrap;
         flex-direction: column;
-        margin-right: 20px;
-        
+        margin-right: 20px;  
     }
     .egyedi{
         flex-basis:23%;
@@ -653,24 +565,15 @@ aside { flex-basis: 100%;
         justify-content: space-around;
         max-width: 600px;
     }
-
-    
-
-
     .kor-container {
         display: flex;
         flex-wrap: nowrap;
         align-items: stretch;
-    
         margin-bottom: 10px;
       }
-    
-    
       .erdekessegek {
         margin-left: 10px;
         margin-top: 0;
       }
    
-
-    
 }
