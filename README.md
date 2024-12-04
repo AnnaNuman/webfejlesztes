@@ -3,9 +3,7 @@ A webfejlesztés tárgy beadandó feladata.
 
 OLDAL KÉSZÍTŐJE: Numan Anna Sára (PS89OG)
 
-ELKÉSZÜLT: 2024. december
-
-URL CÍM: 
+URL CÍM: https://annanuman.github.io/webfejlesztes/
 
 LEÍRÁS: A Zenekuckó honlap bár tanulási célra jött létre, mégis sokkal több ennél, hiszen ez egy egyedi, kizárólag zenével foglalkozó honlap, amin minden zenekedvelő ember talál olyan tartalmat, ami érdekelni fogja. A honlap célja, hogy bemutassa a zene fontosságát, múltját, fajtáit, valamint létrejöttét.
 
